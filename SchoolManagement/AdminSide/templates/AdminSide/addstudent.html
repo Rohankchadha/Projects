@@ -1,0 +1,38 @@
+{% extends 'AdminSide/homepage.html' %}
+{% block content %}
+<div class="row mt-3"></div>
+       <div class="col-lg-12">
+        <div class="card">
+           <div class="card-body">
+           <div class="card-title">Add Student Form</div>
+           <hr>
+            <form action="{% url 'dtat' %}" method="post">
+            {% csrf_token %}
+           <div class="form-group">
+            <label for="input-6">Name</label>
+            <input type="text" class="form-control form-control-rounded" name="sname" id="input-6" placeholder="Enter Your Name">
+           </div>
+           <div class="form-group">
+            <label for="input-6">Class</label>
+            <input type="text" class="form-control form-control-rounded" name="sclass" id="input-7" placeholder="Enter Your Class">
+           </div>
+           <div class="form-group">
+            <label for="input-6">Section</label>
+            <input type="text" class="form-control form-control-rounded" name="ssection" id="input-8" placeholder="Enter Your Section">
+           </div>
+           <div class="form-group">
+            <label for="input-6">Roll No</label>
+            <input type="text" class="form-control form-control-rounded" name="sroll" id="input-9" placeholder="Enter Your Roll No">
+           </div>
+           <div class="form-group">
+            <label for="input-7">Email</label>
+            <input type="text" class="form-control form-control-rounded" name="semail" id="input-10" placeholder="Enter Your Email Address">
+           </div><br>
+           <div class="form-group">
+            <button type="submit" class="btn btn-light btn-round px-5"><i class="icon-lock"></i> Add Student</button>
+          </div>
+          </form>
+         </div>
+         </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+
+{% extends 'App1/page1.html' %}
+{% block body %}
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="{{ data1.file.url }}" class="img-fluid" alt="" width="600px" height="600px">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>{{ data }}</h3>
+            <p class="fst-italic">
+              {{ data2 }}
+            </p>
+            <div>
+              {{ data3 }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->
+{% endblock %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>{{ data }}</p>
+        <img src="{{ data1.file.url }}" alt="" width="20%"><br>
+        <p>{{ data2 }}</p>
+    </div>
+</body>
+</html> -->

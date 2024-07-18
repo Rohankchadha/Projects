@@ -1,0 +1,40 @@
+{% extends 'AdminSide/homepage.html' %}    
+{% block content %}
+    <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Students Table</h5>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Class</th>
+                      <th scope="col">Section</th>
+                      <th scope="col">Roll No</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Update</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for i in data %}
+                    <tr>
+                      <th scope="row">{{ i.id }}</th>
+                      <td>{{ i.name }}</td>
+                      <td>{{ i.class }}</td>
+                      <td>{{ i.section }}</td>
+                      <td>{{ i.rollno }}</td>
+                      <td>{{ i.email }}</td>
+                      <td><button type="submit" class="btn btn-danger btn-round px-5"><i class="icon-lock"></i> Add Student</button></td>
+                      <td><button type="submit" class="btn btn-secondary btn-round px-5"><i class="icon-lock"></i> Add Student</button></td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}

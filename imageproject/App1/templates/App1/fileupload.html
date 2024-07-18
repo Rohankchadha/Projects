@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body>
+    <h2>Upload Image Here</h2> <a href="{% url 'show' %}"><h5>See Uploaded Images</h5></a>
+    <form action="{% url 'img' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    <input type="text" name="imagename" placeholder="Enter Image caption name">
+    <input type="file" name="simage" multiple="multiple" onchange="loadfile(event)">
+    <div id="output"></div><br>
+    <div id="target"></div>
+    <button type="submit">Upload</button>
+</form>
+<script src="{% static 'script/script.js' %}"></script>
+</body>
+</html>
